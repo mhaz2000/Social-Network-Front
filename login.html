@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="./styles/app.css">
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
 </head>
 
 <body>
+    <header>
+        <button class="header-btn register-header-btn">Register</button>
+        <button class="header-btn login-header-btn">Login</button>
+
+    </header>
     <main class="row h-100">
         <div class="col-lg-6 background-image"></div>
         <div class="col-12 col-lg-6 d-flex login-sction">
@@ -20,12 +26,14 @@
                 <h1 class="login-title">Login into <br> your account</h1>
                 <form>
                     <input type="text" name="email" id="email" placeholder="Your Email Address">
+                    <i class="fa fa-envelope-o email-fa"></i>
                     <input type="text" name="password" id="password" placeholder="Password">
+                    <i class="fa fa-lock password-fa"></i>
                     <a class="login-btn">
                         <p>Login</p>
                     </a>
                 </form>
-                <small>Don't have account <a href="#">Register</a></small>
+                <small>Don't have account <a class="register-nav" href="#">Register</a></small>
             </div>
         </div>
     </main>

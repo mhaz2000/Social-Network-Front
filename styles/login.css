@@ -14,6 +14,7 @@ input {
     border: 2px solid rgb(233, 233, 233);
     padding: 5px;
     outline-color: #05f;
+    padding-left: 50px;
 }
 
 .login-container {
@@ -34,4 +35,65 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-nav {
+    text-decoration: none;
+    color: #05f;
+    font-size: 15px;
+}
+
+form {
+    position: relative;
+}
+
+.email-fa {
+    font-size: 25px !important;
+    color: gray !important;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.password-fa {
+    font-size: 25px !important;
+    color: gray !important;
+    position: absolute;
+    left: 20px;
+    top: 90px;
+}
+
+.header-btn {
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    border: none;
+    padding: 20px 25px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.register-header-btn {
+    background-color: #05f;
+    right: 20px;
+    top: 20px;
+    transition: 0.3s;
+}
+
+.login-header-btn {
+    background-color: #343a40;
+    right: 155px;
+    top: 20px;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+.login-header-btn:hover {
+    background-color: gray;
+}
+
+.register-header-btn:hover {
+    background-color: rgb(66, 159, 247);
 }

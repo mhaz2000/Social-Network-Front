@@ -8,14 +8,10 @@
 
 @media only screen and (min-width: 1200px) {}
 
-@media only screen and (max-width: 768px) {
-    .admin-panel-title {
-        margin-bottom: 100px;
-    }
-    .image-holder {
-        height: auto;
-    }
-    .btn-box {
-        margin: 20px auto;
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 992px) {
+    .background-image {
+        display: none;
     }
 }

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/grid.css">
     <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/register.css">
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -21,25 +21,29 @@
     </header>
     <main class="row h-100">
         <div class="col-lg-6 background-image"></div>
-        <div class="col-12 col-lg-6 d-flex login-section">
-            <div class="login-container">
-                <h1 class="login-title">Login into <br> your account</h1>
+        <div class="col-12 col-lg-6 d-flex register-section">
+            <div class="register-container">
+                <h1 class="register-title">Create <br> your account</h1>
                 <form>
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <i class="fa fa-user name-fa"></i>
                     <input type="text" name="email" id="email" placeholder="Your Email Address">
                     <i class="fa fa-envelope-o email-fa"></i>
                     <input type="text" name="password" id="password" placeholder="Password">
                     <i class="fa fa-lock password-fa"></i>
-                    <a class="login-btn">
-                        <p>Login</p>
+                    <input type="text" name="matchPassword" id="matchPassword" placeholder="Confirm Password">
+                    <i class="fa fa-lock matchPassword-fa"></i>
+                    <a class="register-btn">
+                        <p>Register</p>
                     </a>
                 </form>
-                <small>Don't have account <a class="register-nav" href="./register.html">Register</a></small>
+                <small>Already have account <a class="register-nav" href="./login.html">Login</a></small>
             </div>
         </div>
     </main>
 </body>
 
 
-<script src="./scripts/login.js"></script>
+<script src="./scripts/register.js"></script>
 
 </html>

@@ -1,5 +1,5 @@
 .background-image {
-    background: url('../images/login.png') no-repeat;
+    background: url('../images/register.png') no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
@@ -17,15 +17,15 @@ input {
     padding-left: 50px;
 }
 
-.login-container {
+.register-container {
     width: 55%;
 }
 
-.login-title {
+.register-title {
     font-size: 40px;
 }
 
-.login-btn {
+.register-btn {
     display: block;
     background-color: #343a40;
     border-radius: 7px;
@@ -49,12 +49,20 @@ form {
     position: relative;
 }
 
+.name-fa {
+    font-size: 25px !important;
+    color: gray !important;
+    position: absolute;
+    left: 15px;
+    top: 16px;
+}
+
 .email-fa {
     font-size: 25px !important;
     color: gray !important;
     position: absolute;
     left: 15px;
-    top: 15px;
+    top: 90px;
 }
 
 .password-fa {
@@ -62,7 +70,15 @@ form {
     color: gray !important;
     position: absolute;
     left: 20px;
-    top: 90px;
+    top: 168px;
+}
+
+.matchPassword-fa {
+    font-size: 25px !important;
+    color: gray !important;
+    position: absolute;
+    left: 20px;
+    top: 242px;
 }
 
 .header-btn {
@@ -94,7 +110,7 @@ form {
     transition: 0.3s;
 }
 
-.login-btn:hover,
+.register-btn:hover,
 .login-header-btn:hover {
     background-color: gray;
 }
@@ -103,7 +119,7 @@ form {
     background-color: rgb(66, 159, 247);
 }
 
-.login-section {
+.register-section {
     justify-content: center;
     align-items: center;
 }

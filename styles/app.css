@@ -29,3 +29,7 @@
 .j-start {
     justify-content: start;
 }
+
+.d-none {
+    display: none;
+}

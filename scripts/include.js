@@ -19,4 +19,16 @@ function includeHTML() {
             return;
         }
     }
+    let icon = document.querySelector(".icon");
+    let menu = document.querySelector(".top-header");
+
+    icon.addEventListener("click", function() {
+        if (icon.classList.contains("fa-bars")) {
+            menu.style.left = 0;
+            icon.classList = "fa fa-times";
+        } else {
+            menu.style.left = "-250px";
+            icon.classList = "fa fa-bars";
+        }
+    })
 }

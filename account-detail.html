@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/accountDetail.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register</title>
+</head>
+
+<body onload="includeHTML()">
+    <div include-html="./header.html"></div>
+    <main>
+        <div class="container">
+            <div class="row j-center">
+                <div class="detail-account-box">
+                    <div class="row w-100 holder">
+                        <div class="detail-account-box-header">
+                            <h2>Account Details</h2>
+                        </div>
+                        <div class="detail-account-content w-100">
+                            <div class="user-info">
+                                <div class="image-container">
+                                    <img class="user-image" src="./images/pt-1.jpg" alt="">
+                                </div>
+                                <h3 class="name-container">James Ford</h3>
+                                <h4>Dubai</h4>
+                            </div>
+                            <div class="form-container">
+                                <form>
+                                    <div class="row input-row">
+                                        <div class="col-12 col-lg-6 d-flex j-start">
+                                            <div class="input-container">
+                                                <label for="firstName">First Name</label><br>
+                                                <input type="text" id="firstName">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 d-flex j-end">
+                                            <div class="input-container">
+                                                <label for="lastName">Last Name</label><br>
+                                                <input type="text" id="lastName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row input-row">
+                                        <div class="col-12 col-lg-6 d-flex j-start">
+                                            <div class="input-container">
+                                                <label for="email">Email</label><br>
+                                                <input type="text" id="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 d-flex j-end">
+                                            <div class="input-container">
+                                                <label for="phone">Phone</label><br>
+                                                <input type="text" id="phone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row input-row">
+                                        <label for="country">Country</label><br>
+                                        <input type="text" id="country">
+                                    </div>
+                                    <div class="row input-row">
+                                        <label for="address">Address</label><br>
+                                        <input type="text" id="address">
+                                    </div>
+                                    <div class="row input-row">
+                                        <div class="col-12 col-lg-6 d-flex j-start">
+                                            <div class="input-container">
+                                                <label for="townOrCity">Town / City</label><br>
+                                                <input type="text" id="townOrCity">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 d-flex j-end">
+                                            <div class="input-container">
+                                                <label for="postcode">Postcode</label><br>
+                                                <input type="text" id="postcode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row input-row">
+                                        <input class="custom-file-input" type="file" id="address">
+                                        <i class="fa fa-upload upload-icon" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="row input-row">
+                                        <label for="description">Description</label><br>
+                                        <textarea id="description" placeholder="Write Your Bio ..."></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <button class="submit-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+
+<script src="./scripts/accountDetail.js"></script>
+<script src="./scripts/include.js"></script>
+
+
+</html>

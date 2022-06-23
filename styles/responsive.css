@@ -36,10 +36,52 @@
         height: 35px !important;
     }
     .nav-items a {
-        font-size: 25px !important;
+        font-size: 20px !important;
+        width: 100%;
+    }
+    .nav-items a>section {
+        display: inline;
+        margin-left: 10px;
     }
     .profile-img {
-        width: 35px !important;
-        height: 35px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .top-header .nav-items {
+        display: block;
+        padding: 0px;
+        width: 100% !important;
+    }
+    .nav-items li {
+        margin-bottom: 15px !important;
+        margin-left: 20px;
+    }
+    .top-header .nav-item {
+        margin-bottom: 15px;
+        background-color: transparent;
+        width: 100% !important;
+    }
+    .top-header {
+        display: block !important;
+        width: 250px;
+        position: fixed;
+        background-color: #e8e8f6;
+        margin: 0px !important;
+        z-index: 50;
+        height: 100vh;
+    }
+    .brand {
+        display: block;
+        margin-left: 15px;
+    }
+    .profile-menu-icon {
+        margin-left: 15px !important;
+    }
+    .top-header .fa {
+        width: 30px;
+    }
+    .menu-icon {
+        display: inline-block !important;
+        z-index: 50;
     }
 }

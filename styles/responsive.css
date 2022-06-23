@@ -6,12 +6,40 @@
 
 @media only screen and (min-width: 992px) {}
 
-@media only screen and (min-width: 1200px) {}
-
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 1200px) {
+    .detail-account-box {
+        width: 80%;
+    }
+}
 
 @media only screen and (max-width: 992px) {
     .background-image {
         display: none;
+    }
+    .input-container {
+        width: 100%;
+    }
+    .input-row {
+        margin-bottom: 0px;
+    }
+    input {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .brand {
+        font-size: 30px !important;
+    }
+    .nav-item {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .nav-items a {
+        font-size: 25px !important;
+    }
+    .profile-img {
+        width: 35px !important;
+        height: 35px !important;
     }
 }

@@ -9,3 +9,23 @@
 .d-flex {
     display: flex;
 }
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.j-start {
+    justify-content: start;
+}

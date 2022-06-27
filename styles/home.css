@@ -1,0 +1,69 @@
+.post {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 10px 15px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+main {
+    background-color: #eee;
+}
+
+.profile-image {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content {
+    text-align: justify;
+    color: #adb5bd;
+}
+
+.reactions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reactions i {
+    font-size: 25px;
+    color: #000;
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.share-container section {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.like-comment {
+    display: flex;
+    align-items: center;
+}
+
+.like-count,
+.comment-count {
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+.like,
+.comment {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}

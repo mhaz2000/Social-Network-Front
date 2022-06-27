@@ -71,13 +71,10 @@ form {
     position: absolute;
     border: none;
     padding: 20px 25px;
-    width: 120px;
+    width: 70px;
     cursor: pointer;
-}
-
-.header-btn>a {
     text-decoration: none;
-    color: inherit;
+    text-align: center;
 }
 
 .register-header-btn {
@@ -91,7 +88,7 @@ form {
     background-color: #343a40;
     right: 155px;
     top: 20px;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 
 .login-btn:hover,
@@ -115,4 +112,28 @@ small {
 
 small a {
     font-weight: bolder;
+}
+
+.register-success-box {
+    display: none;
+    background-color: #05f;
+    color: #fff;
+    width: 30%;
+    height: 100px;
+    position: absolute;
+    left: 35%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    top: 85vh;
+    transition: 0.3s;
+}
+
+#register-success {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#register-success.fade {
+    opacity: 0;
 }

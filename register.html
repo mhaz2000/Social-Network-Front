@@ -15,8 +15,12 @@
 
 <body>
     <header>
-        <button class="header-btn register-header-btn"><a href="./register.html">Register</a></button>
-        <button class="header-btn login-header-btn"><a href="./login.html">Login</a></button>
+        <a class="header-btn register-header-btn" href="./register.html">
+            <div>Register</div>
+        </a>
+        <a class="header-btn login-header-btn" href="./login.html">
+            <div>Login</div>
+        </a>
 
     </header>
     <main class="row h-100">
@@ -24,18 +28,20 @@
         <div class="col-12 col-lg-6 d-flex register-section">
             <div class="register-container">
                 <h1 class="register-title">Create <br> your account</h1>
-                <form>
-                    <input type="text" name="name" id="name" placeholder="Your Name">
+                <form id="registration-form">
+                    <input onclick="clearMessages()" type="text" name="name" id="name" placeholder="Your Name">
                     <i class="fa fa-user name-fa"></i>
-                    <input type="text" name="email" id="email" placeholder="Your Email Address">
+                    <input onclick="clearMessages()" type="text" name="email" id="email" placeholder="Your Email Address">
                     <i class="fa fa-envelope-o email-fa"></i>
-                    <input type="text" name="password" id="password" placeholder="Password">
+                    <input onclick="clearMessages()" type="password" name="password" id="password" placeholder="Password">
                     <i class="fa fa-lock password-fa"></i>
-                    <input type="text" name="matchPassword" id="matchPassword" placeholder="Confirm Password">
+                    <input onclick="clearMessages()" type="password" name="matchPassword" id="matchPassword" placeholder="Confirm Password">
                     <i class="fa fa-lock matchPassword-fa"></i>
-                    <a class="register-btn">
+                    <a class="register-btn" onclick="register()">
                         <p>Register</p>
                     </a>
+                    <div class="message" id="message"></div>
+
                 </form>
                 <small>Already have account <a class="register-nav" href="./login.html">Login</a></small>
             </div>

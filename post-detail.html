@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./styles/app.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/post-detail.css">
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Home</title>
+    <title>Post</title>
 </head>
 
 <body onload="includeHTML()">
@@ -35,55 +36,64 @@
                         impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium, ex aliquid dicta vitae
                         iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
                     </p>
-                    <div class="reactions">
-                        <div class="like-comment">
-                            <div class="like">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <section class="like-count">2.1K Like</section>
-                            </div>
-                            <div class="comment">
-                                <i class="fa fa-comment-o"></i>
-                                <section class="comment-count">22 comments</section>
-                            </div>
-                        </div>
-                        <div class="share-container">
-                            <i class="fa fa-share-alt"></i>
-                            <section>Share</section>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="row j-center">
-                <div class="post">
-                    <div class="row">
-                        <img class="profile-image" src="./images/user-profile.png" alt="">
-                        <div class="post-info">
-                            <h4>Jack Howard</h4>
-                            <p>2 Hours</p>
+
+                <div class="comments">
+                    <div class="row user-comment-info">
+                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
+                        <div class="user-comment-info">
+                            <h4>Sara Brown</h4>
                         </div>
                     </div>
-                    <div class="image-container">
-                        <img class="post-image" src="./images/post.jpg" alt="">
+                    <form>
+                        <textarea name="comment" id="comment" placeholder="Write your opinion ..."></textarea>
+                        <button class="post-btn">Post</button>
+                    </form>
+                </div>
+
+                <div class="comments">
+                    <div class="row user-comment-info">
+                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
+                        <div class="user-comment-info">
+                            <h4>Sara Brown</h4>
+                            <p>1 Hour</p>
+                        </div>
                     </div>
-                    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore natus
-                        fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero dolorem tempora
-                        impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium, ex aliquid dicta vitae
-                        iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                    </p>
-                    <div class="reactions">
+                    <div class="comment-content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam non mollitia nemo incidunt quis id quae atque blanditiis. Quibusdam ducimus, magni labore minima expedita facilis id, nostrum omnis deserunt aliquam cupiditate neque animi incidunt
+                        quidem. Qui quo autem odio adipisci ad ratione nesciunt laborum odit cumque provident. Adipisci, libero?
+                    </div>
+                    <div class="reactions comment-reaction">
                         <div class="like-comment">
                             <div class="like">
                                 <i class="fa fa-thumbs-o-up"></i>
                                 <section class="like-count">2.1K Like</section>
                             </div>
-                            <div class="comment">
-                                <i class="fa fa-comment-o"></i>
-                                <section class="comment-count">22 comments</section>
-                            </div>
                         </div>
-                        <div class="share-container">
-                            <i class="fa fa-share-alt"></i>
-                            <section>Share</section>
+                    </div>
+                </div>
+
+
+                <div class="comments">
+                    <div class="row user-comment-info">
+                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
+                        <div class="user-comment-info">
+                            <h4>Sara Brown</h4>
+                            <p>1 Hour</p>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam non mollitia nemo incidunt quis id quae atque blanditiis. Quibusdam ducimus, magni labore minima expedita facilis id, nostrum omnis deserunt aliquam cupiditate neque animi incidunt
+                        quidem. Qui quo autem odio adipisci ad ratione nesciunt laborum odit cumque provident. Adipisci, libero?
+                    </div>
+                    <div class="reactions comment-reaction">
+                        <div class="like-comment">
+                            <div class="like">
+                                <i class="fa fa-thumbs-o-up"></i>
+                                <section class="like-count">2.1K Like</section>
+                            </div>
                         </div>
                     </div>
                 </div>

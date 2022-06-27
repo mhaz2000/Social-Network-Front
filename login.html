@@ -13,25 +13,33 @@
     <title>Login</title>
 </head>
 
-<body>
+<body onload="load()">
     <header>
-        <button class="header-btn register-header-btn"><a href="./register.html">Register</a></button>
-        <button class="header-btn login-header-btn"><a href="./login.html">Login</a></button>
+        <a class="header-btn register-header-btn" href="./register.html">
+            <div>Register</div>
+        </a>
+        <a class="header-btn login-header-btn" href="./login.html">
+            <div>Login</div>
+        </a>
 
     </header>
     <main class="row h-100">
+        <div class="register-success-box" id="register-success">
+            You have been registered successfully.
+        </div>
         <div class="col-lg-6 background-image"></div>
         <div class="col-12 col-lg-6 d-flex login-section">
             <div class="login-container">
                 <h1 class="login-title">Login into <br> your account</h1>
                 <form>
-                    <input type="text" name="email" id="email" placeholder="Your Email Address">
+                    <input onclick="clearMessages()" type="text" name="email" id="email" placeholder="Your Email Address">
                     <i class="fa fa-envelope-o email-fa"></i>
-                    <input type="text" name="password" id="password" placeholder="Password">
+                    <input onclick="clearMessages()" type="password" name="password" id="password" placeholder="Password">
                     <i class="fa fa-lock password-fa"></i>
-                    <a class="login-btn">
+                    <a class="login-btn" onclick="login()">
                         <p>Login</p>
                     </a>
+                    <div class="message" id="message"></div>
                 </form>
                 <small>Don't have account <a class="register-nav" href="./register.html">Register</a></small>
             </div>

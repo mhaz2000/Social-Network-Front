@@ -126,8 +126,35 @@ textarea {
     width: 150px;
     height: 50px;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     margin-top: 20px;
+}
+
+.message-box {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background-color: #05f;
+    color: #fff;
+    top: 120px;
+    right: 15px;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#update-success {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#update-success.fade {
+    opacity: 0;
 }

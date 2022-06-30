@@ -20,7 +20,8 @@ function login() {
         }).then(response => {
             if (response.ok) {
                 response.json().then(data => {
-                    console.log(data.message);
+                    document.cookie = `token=Bearer ${data.content.authToken}`;
+                    location.replace('../account-detail.html')
                 })
             } else {
                 response.json().then(data => {

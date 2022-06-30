@@ -39,3 +39,15 @@
     color: red;
     font-size: 16px;
 }
+
+.p-relative {
+    position: relative;
+}
+
+.j-space-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}

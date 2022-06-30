@@ -1,0 +1,126 @@
+main {
+    background-color: #eee;
+}
+
+.user-summary {
+    padding: 0px 15px;
+    background-color: #fff;
+    position: relative;
+    width: 85%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.user-summary>img {
+    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.user-profile {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: -30;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.name-email {
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.username {
+    margin-bottom: 5px;
+}
+
+.email {
+    color: #adb5bd;
+    font-size: 15px;
+}
+
+.follow-btn {
+    background: #10d876 !important;
+    border: none;
+    color: white;
+    margin: 15px 0px;
+    width: 15%;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.user-activities {
+    width: 87%;
+    margin-top: 20px;
+}
+
+.description {
+    text-align: justify;
+    color: #adb5bd;
+    font-size: 15px;
+}
+
+.about {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.post {
+    width: 97%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 90px;
+    height: 90px;
+    margin: 10px 15px 10px 15px;
+}
+
+.post-image {
+    width: 95%;
+    border-radius: 5px;
+    margin: 5px 15px;
+}
+
+.content {
+    text-align: justify;
+    color: #adb5bd;
+    padding: 0px 15px;
+}
+
+.friends {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.friend {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: gray;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friend-image {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.addFriend-btn {
+    background-color: #05f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 45px;
+}

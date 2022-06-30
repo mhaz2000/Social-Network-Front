@@ -58,3 +58,7 @@ i {
     top: 15;
     font-size: 30px;
 }
+
+.brand-navigation {
+    text-decoration: none;
+}

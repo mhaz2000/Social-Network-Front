@@ -1,3 +1,5 @@
+var fileId = '';
+
 function SendDetailAccount() {
     var email = document.getElementById('email');
     var postcode = document.getElementById('postcode');
@@ -25,7 +27,8 @@ function SendDetailAccount() {
             lastName: lastName.value,
             firstName: firstName.value,
             townOrCity: townOrCity.value,
-            description: description.value
+            description: description.value,
+            avatar: fileId
         })
     }).then(response => {
         if (response.ok) {
@@ -81,6 +84,13 @@ function getUserInfo() {
                 townOrCity.value = data.content.townOrCity === null ? '' : data.content.townOrCity;
                 description.value = data.content.description === null ? '' : data.content.description;
 
+                if (data.content.avatar)
+                    loadPostImage(data.content.avatar).then(img => {
+                        document.getElementById('uploaded-image').src = URL.createObjectURL(img);
+                    });
+                else
+                    document.getElementById('uploaded-image').src = './images/unknow-user-image.png';
+
                 if (firstName.value || lastName.value)
                     displayName.innerHTML = firstName.value + " " + lastName.value;
 
@@ -90,6 +100,9 @@ function getUserInfo() {
 
             })
         } else {
+            if (response.status == 401) {
+                location.replace('../login.html');
+            }
             response.json().then(data => {})
         }
     });

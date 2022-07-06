@@ -54,6 +54,15 @@ textarea {
     width: 150px;
     height: 50px;
     margin-left: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.save-btn:hover {
+    background-color: rgb(66, 159, 247)
 }
 
 .edit-icon {
@@ -83,4 +92,41 @@ textarea {
     margin-left: 10px;
     margin-top: 25px;
     color: #adb5bd;
+}
+
+.uploaded-image {
+    width: 50%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.message {
+    margin: 0px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.delete-post-btn {
+    margin-right: 2.5%;
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.delete-post-btn:hover {
+    background-color: rgb(247, 73, 73);
+}
+
+.remove-friend {
+    background-color: red;
+    height: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
 }

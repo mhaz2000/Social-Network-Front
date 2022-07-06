@@ -15,7 +15,7 @@
     <title>My Profile</title>
 </head>
 
-<body onload="includeHTML()">
+<body onload="includeHTML(); checkUser(); getUser();">
     <div include-html="./header.html"></div>
     <main>
         <div class="container">
@@ -23,14 +23,15 @@
                 <div class="col-12 d-flex j-center">
                     <header class="user-summary">
                         <img src="./images/user-background.jpg" alt="" class="header-background-image">
-                        <div class="row p-relative j-space-between">
+                        <div id="user-info-holder" class="row p-relative j-space-between">
                             <div class="user-info">
-                                <img class="user-profile" src="./images/user-profile2.png" alt="">
+                                <img id="user-profile" class="user-profile" alt="">
                                 <div class="name-email">
-                                    <h3 class="username">Mohannad Zitoun</h3>
-                                    <p class="email">support@gmail.com</p>
+                                    <h3 id="name" class="username"></h3>
+                                    <p id="email" class="email"></p>
                                 </div>
                             </div>
+                            <button id="follow-btn" class="follow-btn" onclick="addFriend()">Add Friend</button>
                         </div>
                     </header>
                 </div>
@@ -38,32 +39,14 @@
                     <div class="col-12 col-lg-4">
                         <div class="about">
                             <h3 class="about-header">About</h3>
-                            <p class="description">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, minus? Neque, fugit rerum ipsum blanditiis deleniti est aliquam illo cum iure asperiores eos quidem ex modi aut nam a amet reiciendis doloremque tempore consequatur quae sunt molestias id
-                                sapiente. Id quae a laborum omnis quia, dolores ipsam! Pariatur, commodi accusamus itaque voluptatem, ea non in doloribus tenetur molestias voluptatibus id impedit temporibus aut ex hic! A quam nemo quae. Adipisci?
-                            </p>
+                            <p id="description" class="description"></p>
                         </div>
-                        <div class="friends">
-                            <div class="friend d-flex">
-                                <div class="friend-info d-flex">
-                                    <img class="friend-image" src="./images/user-profile.png" alt="">
-                                    <div>
-                                        <h4>Jack Howard</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="friend d-flex">
-                                <div class="friend-info d-flex">
-                                    <img class="friend-image" src="./images/user-profile.png" alt="">
-                                    <div>
-                                        <h4>Jack Howard</h4>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="friends" class="friends">
+                            <h3>Friends</h3>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-8 d-flex j-end flex-wrap">
-                        <div class="new-post">
+                    <div id="right-col" class="col-12 col-lg-8 d-flex j-end flex-wrap">
+                        <div id="new-post" class="new-post">
                             <form action="">
                                 <div class="row">
                                     <div class="section-title">
@@ -75,51 +58,17 @@
                                     <div class="col-12 d-flex j-center">
                                         <textarea name="post-content" id="post-content" placeholder="Write your post ..."></textarea>
                                     </div>
+                                    <div id="uploaded-image-container" class="d-flex j-center w-100">
+                                        <img class="uploaded-image" id="uploaded-image" alt="">
+                                    </div>
                                     <div class="col-12 d-flex j-center p-relative">
-                                        <input class="custom-file-input" type="file" id="address">
+                                        <input onchange="upload()" class="custom-file-input" type="file" id="file">
                                         <i class="fa fa-upload upload-icon" aria-hidden="true"></i>
                                     </div>
-                                    <button class="save-btn">Post</button>
+                                    <div class="message" id="message"></div>
+                                    <a class="save-btn" onclick="post()">Post</a>
                                 </div>
                             </form>
-                        </div>
-                        <div class="post">
-                            <div class="row">
-                                <img class="profile-image" src="./images/user-profile2.png" alt="">
-                                <div>
-                                    <h4>Jack Howard</h4>
-                                    <p>2 Hours</p>
-                                </div>
-                            </div>
-                            <div class="d-flex j-center">
-                                <img class="post-image" src="./images/post.jpg" alt="">
-                            </div>
-
-                            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore
-                                natus fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero
-                                dolorem tempora impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium,
-                                ex aliquid dicta vitae iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                            </p>
-
-                        </div>
-                        <div class="post">
-                            <div class="row">
-                                <img class="profile-image" src="./images/user-profile2.png" alt="">
-                                <div>
-                                    <h4>Jack Howard</h4>
-                                    <p>2 Hours</p>
-                                </div>
-                            </div>
-                            <div class="d-flex j-center">
-                                <img class="post-image" src="./images/post.jpg" alt="">
-                            </div>
-
-                            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore
-                                natus fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero
-                                dolorem tempora impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium,
-                                ex aliquid dicta vitae iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                            </p>
-
                         </div>
                     </div>
                 </div>
@@ -129,6 +78,8 @@
 </body>
 
 <script src="./scripts/user.js"></script>
+<script src="./scripts/postHandler.js"></script>
+<script src="./scripts/fileHandler.js"></script>
 <script src="./scripts/include.js"></script>
 
 </html>

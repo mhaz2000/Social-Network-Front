@@ -25,6 +25,10 @@ function getUser() {
     }).then(response => {
         if (response.ok) {
             response.json().then(data => {
+                try {
+                    document.getElementById('follow-btn').id = data.content.id;
+                } catch (error) {}
+
                 email.innerHTML = data.content.email;
                 name.innerHTML = data.content.firstName || data.content.lastName ?
                     data.content.firstName + ' ' + data.content.lastName :
@@ -75,13 +79,18 @@ async function makeFriends(friendValue) {
     if (isCurrentUser) {
         var removeFriend = document.createElement('div');
         removeFriend.classList.add('remove-friend');
-        removeFriend.innerHTML = 'remove friend';
+        removeFriend.innerHTML = 'Remove';
         removeFriend.id = friendValue.id;
         removeFriend.addEventListener('click', removingFriend)
     }
 
+    debugger
     var friendInfo = document.createElement('div');
-    friendInfo.classList.add('friend-info', 'd-flex');
+    friendInfo.classList.add('friend-info', 'd-flex', 'cursor-p');
+    friendInfo.id = friendValue.id;
+    friendInfo.addEventListener('click', navigateToUser);
+
+
 
     var image = document.createElement('img');
     image.classList.add('friend-image');
@@ -247,12 +256,11 @@ function checkUser() {
             if (!response.ok) {
                 btn = document.getElementById('follow-btn');
                 document.getElementById('user-info-holder').removeChild(btn);
-
-
             } else {
                 newPost = document.getElementById('new-post');
                 document.getElementById('right-col').removeChild(newPost);
-                isCurrentUser = false
+                isCurrentUser = false;
+                checkFriend(id);
             }
         });
     } else {
@@ -293,4 +301,27 @@ function removingFriend(event) {
             location.reload();
         }
     });
+}
+
+function checkFriend(id) {
+    fetch('http://localhost:4030/api/user/checkFriend/' + id, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": document.cookie.split('=')[1]
+        }
+    }).then(response => {
+        if (response.ok) {
+            var btn = document.getElementById(id);
+            btn.style.backgroundColor = 'red';
+            btn.innerHTML = 'Remove Friend';
+            btn.addEventListener('click', removingFriend);
+        }
+    });
+}
+
+function navigateToUser(event) {
+    id = event.target.id || event.target.parentElement.id || event.target.parentElement.parentElement.id;
+    location.replace('../my-profile.html?id=' + id);
 }

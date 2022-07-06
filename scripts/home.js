@@ -20,6 +20,7 @@ function init() {
 
 async function makePosts(input) {
     input.then(post => {
+        debugger
         container = document.getElementById('container');
 
         upperRow = document.createElement('div');
@@ -30,10 +31,9 @@ async function makePosts(input) {
         postSection.id = post.id;
 
         row = document.createElement('div');
-        row.classList.add('row');
+        row.classList.add('row', 'cursor-p');
         row.addEventListener('click', navigateToUser);
         row.id = post.postOwnerId;
-
 
         profileImage = document.createElement('img');
         profileImage.classList.add('profile-image');
@@ -80,6 +80,7 @@ async function makePosts(input) {
         commentSection.innerHTML = post.commentsCount;
 
         share = document.createElement('div');
+        share.classList.add('share-container')
         share.innerHTML = '<i class="fa fa-share-alt"></i><section>Share</section>';
 
 
@@ -103,8 +104,10 @@ async function makePosts(input) {
 }
 
 async function getData(post) {
-    image = await loadPostImage(post.image);
-    userAvatar = null
+    debugger
+    let image = await loadPostImage(post.image);
+
+    let userAvatar = null
     if (post.postOwnerAvatar)
         userAvatar = await loadPostImage(post.postOwnerAvatar);
 

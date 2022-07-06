@@ -51,3 +51,7 @@
 .flex-wrap {
     flex-wrap: wrap;
 }
+
+.cursor-p {
+    cursor: pointer;
+}

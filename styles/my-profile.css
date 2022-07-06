@@ -129,4 +129,5 @@ textarea {
     justify-content: center;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }

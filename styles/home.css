@@ -69,3 +69,9 @@ main {
     align-items: center;
     margin-right: 20px;
 }
+
+.share-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

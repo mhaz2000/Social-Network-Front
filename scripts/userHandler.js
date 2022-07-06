@@ -14,3 +14,9 @@ function getUser(id) {
         }
     });
 }
+
+
+function navigateToUser(event) {
+    id = event.target.id || event.target.parentElement.id || event.target.parentElement.parentElement.id;
+    location.replace('../my-profile.html?id=' + id);
+}

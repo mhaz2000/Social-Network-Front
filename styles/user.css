@@ -42,13 +42,14 @@ main {
 }
 
 .follow-btn {
-    background: #10d876 !important;
+    background: #10d876;
     border: none;
     color: white;
     margin: 15px 0px;
     width: 15%;
     border-radius: 7px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .user-activities {

@@ -16,7 +16,9 @@ function getPost() {
     }).then(response => {
         if (response.ok) {
             response.json().then(data => {
-                getUserInfo(data.content.postOwnerId, data.content.time, data.content.currentUserAvatar, data.content.postOwnerAvatar);
+                getUserInfo(data.content.postOwnerId, data.content.time, data.content.currentUserAvatar,
+                    data.content.postOwnerAvatar, data.content.postOwnerFirstName, data.content.postOwnerLastName,
+                    data.content.postOwnerUsername);
                 loadPostImage(data.content.image).then(img => {
                     document.getElementById('post-image').src = URL.createObjectURL(img);
                     getComments();
@@ -32,7 +34,8 @@ function getPost() {
     // getComments();
 }
 
-function getUserInfo(id, createdTime, userAvatar, postOwnerAvatar) {
+function getUserInfo(id, createdTime, userAvatar, postOwnerAvatar, postOwnerFirstName, postOwnerLastName,
+    postOwnerUsername) {
     fetch('http://localhost:4030/api/user/GetUserDetail?userId=' + id, {
         method: 'GET',
         mode: 'cors',
@@ -52,8 +55,9 @@ function getUserInfo(id, createdTime, userAvatar, postOwnerAvatar) {
                 userName = document.createElement('h4');
                 commentUserName = document.createElement('h4');
 
-                userName.innerHTML = (data.content.firstName || data.content.lastName) ?
-                    data.content.firstName + ' ' + data.content.lastName : data.content.username;
+                userName.innerHTML = (postOwnerFirstName || postOwnerLastName) ?
+                    postOwnerFirstName + ' ' + postOwnerLastName : postOwnerUsername;
+
                 commentUserName.innerHTML = (data.content.firstName || data.content.lastName) ?
                     data.content.firstName + ' ' + data.content.lastName : data.content.username;
 

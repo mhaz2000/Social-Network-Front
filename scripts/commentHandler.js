@@ -60,7 +60,10 @@ async function makeComment(comment) {
     comments.classList.add('comments');
 
     row = document.createElement('div');
-    row.classList.add('row', 'user-comment-info');
+    row.classList.add('row', 'user-comment-info', 'cursor-p');
+    row.id = comment.commentOwnerId;
+    row.addEventListener('click', navigateToUser);
+
 
     commentProfileImage = document.createElement('img');
     commentProfileImage.classList.add('comment-profile-image');
@@ -74,7 +77,8 @@ async function makeComment(comment) {
 
     commentUsername = document.createElement('h4');
     commentTime = document.createElement('p');
-    commentUsername.innerHTML = (comment.firstName || comment.lastName) ? comment.firstName + ' ' + comment.lastName : comment.username
+    commentUsername.innerHTML = (comment.firstName || comment.lastName) ?
+        comment.firstName + ' ' + comment.lastName : comment.username
     commentTime.innerHTML = comment.time;
 
 
@@ -93,17 +97,14 @@ async function makeComment(comment) {
     like.classList.add('like');
 
     icon = document.createElement('i');
-    // icon.classList.add('fa', 'fa-thumbs-o-up');
 
     likeCount = document.createElement('section');
     likeCount.classList.add('like-count');
-
 
     userCommentInformation.appendChild(commentUsername);
     userCommentInformation.appendChild(commentTime);
     row.appendChild(commentProfileImage);
     row.appendChild(userCommentInformation);
-    // like.appendChild(icon);
     like.appendChild(likeCount);
     likeComment.appendChild(like);
     reaction.appendChild(likeComment);
@@ -111,7 +112,6 @@ async function makeComment(comment) {
     comments.appendChild(commentContent);
     comments.appendChild(reaction);
     commentSection.appendChild(comments);
-
 }
 
 function clearInput() {
@@ -123,12 +123,14 @@ async function getCommentData(comment) {
     image = await loadPostImage(comment.avatar);
 
     return {
+        id: comment.id,
         username: username,
         image: image,
         time: comment.time,
         firstName: comment.firstName,
         lastName: comment.lastName,
-        content: comment.content
+        content: comment.content,
+        commentOwnerId: comment.commentOwnerId
     }
 
 }

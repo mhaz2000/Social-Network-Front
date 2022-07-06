@@ -14,85 +14,18 @@
     <title>Home</title>
 </head>
 
-<body onload="includeHTML()">
+<body onload="includeHTML(); init()">
     <div include-html="./header.html"></div>
     <main>
-        <div class="container">
-            <div class="row j-center">
-                <div class="post">
-                    <div class="row">
-                        <img class="profile-image" src="./images/user-profile.png" alt="">
-                        <div class="post-info">
-                            <h4>Jack Howard</h4>
-                            <p>2 Hours</p>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img class="post-image" src="./images/post.jpg" alt="">
-                    </div>
-                    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore natus
-                        fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero dolorem tempora
-                        impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium, ex aliquid dicta vitae
-                        iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                    </p>
-                    <div class="reactions">
-                        <div class="like-comment">
-                            <div class="like">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <section class="like-count">2.1K Like</section>
-                            </div>
-                            <div class="comment">
-                                <i class="fa fa-comment-o"></i>
-                                <section class="comment-count">22 comments</section>
-                            </div>
-                        </div>
-                        <div class="share-container">
-                            <i class="fa fa-share-alt"></i>
-                            <section>Share</section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row j-center">
-                <div class="post">
-                    <div class="row">
-                        <img class="profile-image" src="./images/user-profile.png" alt="">
-                        <div class="post-info">
-                            <h4>Jack Howard</h4>
-                            <p>2 Hours</p>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img class="post-image" src="./images/post.jpg" alt="">
-                    </div>
-                    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore natus
-                        fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero dolorem tempora
-                        impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium, ex aliquid dicta vitae
-                        iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                    </p>
-                    <div class="reactions">
-                        <div class="like-comment">
-                            <div class="like">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <section class="like-count">2.1K Like</section>
-                            </div>
-                            <div class="comment">
-                                <i class="fa fa-comment-o"></i>
-                                <section class="comment-count">22 comments</section>
-                            </div>
-                        </div>
-                        <div class="share-container">
-                            <i class="fa fa-share-alt"></i>
-                            <section>Share</section>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="container" class="container">
+
         </div>
     </main>
 </body>
 
 <script src="./scripts/home.js"></script>
+<script src="./scripts/postHandler.js"></script>
+<script src="./scripts/fileHandler.js"></script>
 <script src="./scripts/include.js"></script>
 
 </html>

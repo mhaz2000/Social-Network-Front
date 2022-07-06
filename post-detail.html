@@ -15,94 +15,45 @@
     <title>Post</title>
 </head>
 
-<body onload="includeHTML()">
+<body onload="includeHTML(); getPost();">
     <div include-html="./header.html"></div>
     <main>
         <div class="container">
             <div class="row j-center">
                 <div class="post">
                     <div class="row">
-                        <img class="profile-image" src="./images/user-profile.png" alt="">
-                        <div class="post-info">
-                            <h4>Jack Howard</h4>
-                            <p>2 Hours</p>
+                        <img id="post-owner-image" class="profile-image" alt="">
+                        <div class="post-info" id="post-info">
                         </div>
                     </div>
                     <div class="image-container">
-                        <img class="post-image" src="./images/post.jpg" alt="">
+                        <img class="post-image" id="post-image" alt="">
                     </div>
-                    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At vitae suscipit possimus tempore natus debitis deleniti earum, nesciunt totam quidem, dolor quaerat, nisi dolorem nobis facilis voluptate! Deserunt doloribus, tempore natus
-                        fuga eligendi quas quisquam in quidem itaque voluptas, facere eum inventore explicabo eveniet quis totam harum qui nisi maiores cupiditate minima! Aut magni voluptatum amet nam sed id, suscipit ducimus adipisci vero dolorem tempora
-                        impedit pariatur necessitatibus? Omnis adipisci cumque impedit facilis sapiente, aperiam ipsam soluta in aspernatur veritatis. Blanditiis fugiat molestias officia quaerat temporibus architecto praesentium, ex aliquid dicta vitae
-                        iusto quibusdam. Aspernatur ducimus vitae voluptates sit enim.
-                    </p>
+                    <p id="content" class="content"></p>
                 </div>
             </div>
-            <div class="row j-center">
-
+            <div id="comment-section" class="row j-center">
                 <div class="comments">
                     <div class="row user-comment-info">
-                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
-                        <div class="user-comment-info">
-                            <h4>Sara Brown</h4>
+                        <img id="add-comment-user-image" id="comment-profile-image" class="comment-profile-image" alt="">
+                        <div id="user-comment-info" class="user-comment-info">
                         </div>
                     </div>
                     <form>
-                        <textarea name="comment" id="comment" placeholder="Write your opinion ..."></textarea>
-                        <button class="post-btn">Post</button>
+                        <textarea name="comment" id="comment" onclick="clearInput()" placeholder="Write your opinion ..."></textarea>
+                        <div class="message" id="message"></div>
+                        <a class="post-btn" onclick="sendComment()">Post</a>
                     </form>
-                </div>
-
-                <div class="comments">
-                    <div class="row user-comment-info">
-                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
-                        <div class="user-comment-info">
-                            <h4>Sara Brown</h4>
-                            <p>1 Hour</p>
-                        </div>
-                    </div>
-                    <div class="comment-content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam non mollitia nemo incidunt quis id quae atque blanditiis. Quibusdam ducimus, magni labore minima expedita facilis id, nostrum omnis deserunt aliquam cupiditate neque animi incidunt
-                        quidem. Qui quo autem odio adipisci ad ratione nesciunt laborum odit cumque provident. Adipisci, libero?
-                    </div>
-                    <div class="reactions comment-reaction">
-                        <div class="like-comment">
-                            <div class="like">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <section class="like-count">2.1K Like</section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="comments">
-                    <div class="row user-comment-info">
-                        <img class="comment-profile-image" src="./images/user-comment-profile.png" alt="">
-                        <div class="user-comment-info">
-                            <h4>Sara Brown</h4>
-                            <p>1 Hour</p>
-                        </div>
-                    </div>
-                    <div class="comment-content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam non mollitia nemo incidunt quis id quae atque blanditiis. Quibusdam ducimus, magni labore minima expedita facilis id, nostrum omnis deserunt aliquam cupiditate neque animi incidunt
-                        quidem. Qui quo autem odio adipisci ad ratione nesciunt laborum odit cumque provident. Adipisci, libero?
-                    </div>
-                    <div class="reactions comment-reaction">
-                        <div class="like-comment">
-                            <div class="like">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <section class="like-count">2.1K Like</section>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
 
-<script src="./scripts/home.js"></script>
+<script src="./scripts/postHandler.js"></script>
+<script src="./scripts/userHandler.js"></script>
+<script src="./scripts/commentHandler.js"></script>
+<script src="./scripts/fileHandler.js"></script>
 <script src="./scripts/include.js"></script>
 
 </html>

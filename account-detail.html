@@ -27,7 +27,7 @@
                         <div class="detail-account-content w-100">
                             <div class="user-info">
                                 <div class="image-container">
-                                    <img class="user-image" src="./images/unknow-user-image.png" alt="">
+                                    <img id="uploaded-image" class="user-image" alt="">
                                 </div>
                                 <h3 class="name-container" id="display-name"></h3>
                                 <h4 id="display-location"></h4>
@@ -85,7 +85,7 @@
                                         </div>
                                     </div>
                                     <div class="row input-row">
-                                        <input class="custom-file-input" type="file" id="address">
+                                        <input onchange="upload()" class="custom-file-input" type="file" id="file">
                                         <i class="fa fa-upload upload-icon" aria-hidden="true"></i>
                                     </div>
                                     <div class="row input-row">
@@ -109,6 +109,7 @@
 </body>
 
 
+<script src="./scripts/fileHandler.js"></script>
 <script src="./scripts/accountDetail.js"></script>
 <script src="./scripts/include.js"></script>
 
